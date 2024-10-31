@@ -1,19 +1,30 @@
-# Why Use Version Control?
+#GitHub Desktop Fundamentals
+---
+**_Learning Objectives_:**  
+1. Understand why we use version control and GitHub
+2. Learn basic terms used in GitHub, such as clone, commit, push, pull, and merge
+3. Learn how to clone repositories, make changes, and update changes on local and remote repositories
+4. Handle branches and resolve merge conflicts
+
+---
+**Question**: Have you ever made a mistake of overwriting a file or saving the wrong version?
+
+## Version Control
 
 Imagine that you’re collaborating with one of your labmates on a project. You’re
 both making changes to functions in the codebase. At one point, you both have
 changed the same lines in a particular function. How do you go about merging
 your changes so that you’re both using the same code?
 
-This is the rationale for version control: a system that manages and records
+This is the rationale for **version control**: a system that manages and records
 changes to a codebase. The most commonly used version control system is called
-`git` (others include Mercurial and SVN). `git` is often used in tandem with a
-cloud-based hosting platform - the most common is Github (but others include
-Gitlab and Bitbucket). The benefit to using Github is that it makes it easier to
+`**git**` (others include Mercurial and SVN). `git` is often used in tandem with a
+cloud-based hosting platform - the most common is **GitHub** (but others include
+Gitlab and Bitbucket). The benefit to using GitHub is that it makes it easier to
 collaborate on code with others via its web platform.
 
-In this lesson, we're going to use the terminal (i.e., bash) to make updates to
-a repository using `git` and Github.
+In this lesson, we're going to use the **GitHub Desktop Application** to make updates to
+a repository.
 
 There are several different workflows in which you might imagine using `git`,
 particularly in an academic setting. These include:
@@ -28,7 +39,7 @@ particularly in an academic setting. These include:
    details may be specific to the project you're working on. However, the
    principles from approach #2 hold here.
 
-# Personal Workflow
+## Personal Workflow
 
 In the personal workflow, you are largely going to be the only person adding to
 the repository. You have one "branch", or version of the code: it'll likely be
@@ -36,7 +47,7 @@ called the `main` branch (in older Github repositories, it may be called the
 `master` branch). Every time you make changes to the code, you'll add them to
 the `main` branch. So what's the benefit to using `git`?
 
-![personal_workflow](../img/personal.png)
+![personal_workflow](../images/personal.png)
 
 `git` keeps track of the differences in the repository each time you make a
 change. The **entire** history of the repository is tracked by `git`. If you
@@ -57,7 +68,7 @@ keep track of those changes between both cases, while also keeping track of the
 entire history. Github provides a nice platform on which we can peruse the
 history of a repository.
 
-![committing](../img/committing.jpeg)
+![committing](../images/committing.jpeg)
 
 Let's go through the process of making changes to a repository, step by step.
 
@@ -117,7 +128,6 @@ to make changes to the codebase. This becomes a little bit more complicated when
 multiple people are making changes at the same time, which requires a slightly
 different workflow.
 
-Open up `03_git_challenge.md` and give Challenge 1 a shot!
 
 # Collaborative Workflow
 
