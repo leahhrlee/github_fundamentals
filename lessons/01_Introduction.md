@@ -1,4 +1,4 @@
-#GitHub Desktop Fundamentals
+# GitHub Desktop Fundamentals
 ---
 **_Learning Objectives_:**  
 1. Understand why we use version control and GitHub
