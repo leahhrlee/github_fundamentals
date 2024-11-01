@@ -7,20 +7,20 @@
 3. Learn how to clone repositories, make changes, and update changes on local and remote repositories
 4. Handle branches and resolve merge conflicts<br>
  ---
- **Question**: Have you ever made a mistake of overwriting a file or saving the wrong version?<br>
+ 🔔**Question**: Have you ever made a mistake of overwriting a file or saving the wrong version?<br>
  
 ## Version Control<br>
  Imagine that you’re collaborating with one of your labmates on a project. You’reboth making changes to functions in the codebase. At one point, you both havechanged the same lines in a particular function. How do you go about mergingyour changes so that you’re both using the same code?<br>
  <br>
- This is the rationale for **version control**. Version control is a system that manages and recordschanges to files over time. The most commonly used version control system is called **Git** (others include Mercurial and SVN). `git` is often used in tandem with acloud-based hosting platform - the most common is **GitHub** (but others includeGitlab and Bitbucket). GitHub is a hosting service for Git repositories. It allows you to store your Git projects in the cloud and provides a platform for collaborating with others. The benefit to using GitHub is that it makes it easier tocollaborate on code with others via its web platform.<br>
+ This is why we use version control. **Version control** is a system that manages and recordschanges to files over time. The most commonly used version control system is called **Git** (others include Mercurial and SVN). `git` is often used in tandem with acloud-based hosting platform - the most common is **GitHub** (but others includeGitlab and Bitbucket). GitHub is a hosting service for Git repositories. It allows you to store your Git projects in the cloud and provides a platform for collaborating with others. The benefit to using GitHub is that it makes it easier tocollaborate on code with others via its web platform.<br>
  
  In this lesson, we're going to use the **GitHub Desktop Application** to make updates toa repository.<br>
  
  There are several different workflows in which you might imagine using `git`, particularly in an academic setting. These include:<br>
  
-1. Working on a repository that is your own repo. You expect that you will   generally be the only person developing code for this repository. <br>
-2. Working on a repository that several people - perhaps some collaborators -   are working on concurrently. <br>
-3. Working on a repository that *many* people (e.g., at least dozens) are   involved in. This may be, for example, an open-source project to which you   contribute changes. We will not cover this approach in this workshop, as the   details may be specific to the project you're working on. However, the   principles from approach 
+1. Working on a repository that is your own repo. You expect that you will generally be the only person developing code for this repository. <br>
+2. Working on a repository that several people - perhaps some collaborators - are working on concurrently. <br>
+3. Working on a repository that *many* people (e.g., at least dozens) are involved in. This may be, for example, an open-source project to which you contribute changes. We will not cover this approach in this workshop, as the details may be specific to the project you're working on. However, the principles from approach 
 #2 hold here.<br>
 
  
