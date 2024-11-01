@@ -20,7 +20,7 @@ This is why we use version control. **Version control** is a system that manages
  ## GitHub
  `git` is often used in tandem with a cloud-based hosting platform - the most common is **GitHub** (but others include Gitlab and Bitbucket). GitHub is a hosting service for Git repositories. It allows you to store your Git projects in the cloud and provides a platform for collaborating with others. The benefit to using GitHub is that it makes it easier to collaborate on code with others via its web platform.<br>
  
-In this lesson, we're going to use the [**GitHub Desktop Application**](https://desktop.github.com/download/) to make updates to a repository.<br>
+In this lesson, we're going to use the [**GitHub Desktop Application**](https://desktop.github.com/download/) to make updates to a repository. [Documentation for GitHub Desktop](https://docs.github.com/en/desktop) can be found here. <br>
 A **repository** (or repo for short) is a central place where all the files related to a project are stored. It includes your project’s code, documentation, and a record of every change made to the files over time, managed through a version control system like Git. <br>
 💡**Tip**: Git and GitHub can be used through command line. We are focusing on GUI version of GitHub. 
 
@@ -29,22 +29,19 @@ We need to make a distinction between two kinds of repositories: there's the loc
 
 So, when we're making changes to a repository, there's two versions that need to stay in sync with each other: the local and the remote. The steps we outline keep track of those changes between both cases, while also keeping track of the entire history. Github provides a nice platform on which we can peruse the history of a repository.<br>
  ![committing](../images/workflow.png)<br>
- ![committing](../images/committing.jpeg)<br>
-1. **Add**: Select the changes you want to save.
-2. **Commit**: Save your selected changes with a description.
-3. **Push**: Upload your saved changes to GitHub for others to see.
-4. **Pull**: Download the latest updates from GitHub to your project.
-5. **Checkout**: Switch between different versions or branches of your project. <br>
+
+1. **Commit**: Save your selected changes with a description.
+2. **Push**: Upload your saved changes to GitHub for others to see.
+3. **Pull**: Download the latest updates from GitHub to your project.
  
- Let's go through the process of making changes to a repository, step by step.<br>
+Let's go through the process of making changes to a repository, step by step.<br>
  
 ### 1. Creating a Repository 
 To creating a new repository on Github, [link](https://docs.github.com/en/get-started/quickstart/create-a-repo) and follow the instructions on how to create a new repository on Github. Make sure to tick the `Add a README file` box under "Initialize this repository with". Click on `Create repository`. You now have a remote    repository (on Github's servers), but **not** a local repository.<br>
 
 To create a new repository on GitHub Desktop, click `Current Repository`, and `add`. Click `Create New Repository`. Make sure to tick the "Initialize this repository with a README file". You now have a local repository but **not** a remote repository. `Publish repository` in order to put this newly created repository onto GitHub. <br>
 
-🥊**Challenge**: Let's create a new repository under your account.
-
+🥊**Challenge**: Let's create a new repository under your account. <br>
 
 ### 2. **Cloning.** 
 Cloning a repository means taking a remote repository, and copying it to our local machine to create a local repository. Under `Current Repository`, click `add`and select `Clone Repository`. You can clone your own repository or any publically avaialable repository.  
@@ -63,7 +60,7 @@ Right now, the local repo knows about the changes we did, but the remote repo do
 ### 6. Check Github
 Let's check the GitHub page to see if the changes you made manifest on the website! <br>
 
- So, even in the personal workflow, there's a lot of individual steps needed just to make changes to the codebase. This becomes a little bit more complicated when multiple people are making changes at the same time, which requires a slightly different workflow.<br>
+So, even in the personal workflow, there's a lot of individual steps needed just to make changes to the codebase. This becomes a little bit more complicated when multiple people are making changes at the same time, which requires a slightly different workflow.<br>
 
  
 ## Collaborative Workflow<br>
