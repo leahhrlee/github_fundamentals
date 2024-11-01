@@ -1,9 +1,5 @@
 # D-Lab Git Fundamentals Workshop
 
-[![DataHub](https://img.shields.io/badge/launch-datahub-blue)](DATAHUB_LINK_HERE)
-[![Binder](https://mybinder.org/badge_logo.svg)](BINDER_LINK_HERE)
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-
 This repository contains the materials for D-Lab Git Fundamentals workshop. 
 
 ### Prerequisites
@@ -48,5 +44,3 @@ Visit the [D-Lab homepage](https://dlab.berkeley.edu/) to learn more about us. Y
 
 # Contributors
 
-**Provide a list of contributors here, with links to their webpages (D-Lab or
-private).**
