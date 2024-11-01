@@ -28,16 +28,15 @@ After this workshop, you will be able to:
 
 ## Installation Instructions
 
-We will use GitHub to go through the workshop materials, which requires installation of [GitHub Desktop](https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop) 
+We will use GitHub to go through the workshop materials, which requires installation of [GitHub Desktop](https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop). 
 Complete the following steps:
 
 1. Make a GitHub account.
-2. Download and install [GitHub Desktop](https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop
+2. Download and install [GitHub Desktop](https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop)
 3. Download these workshop materials:
     * Click the green "Code" button in the top right of the repository information.
     * Click "Download Zip".
     * Extract this file to a folder on your computer where you can easily access it (we recommend Desktop).
-4. Optional: if you’re familiar with git, you can instead clone this repository by opening a terminal and entering [GitCloneCommand].
 
 
 # About the UC Berkeley D-Lab
