@@ -2,7 +2,7 @@
 # GitHub Desktop Fundamentals
 ---
 **_Learning Objectives_:**  
-1. Understand why we use version control and GitHub
+1. Understand why we use version control, Git, and GitHub
 2. Learn basic terms used in GitHub, such as clone, commit, push, pull, and merge
 3. Learn how to clone repositories, make changes, and update changes on local and remote repositories
 4. Handle branches and resolve merge conflicts<br>
@@ -10,27 +10,31 @@
  🔔**Question**: Have you ever made a mistake of overwriting a file or saving the wrong version?<br>
  
 ## Version Control<br>
- Imagine that you’re collaborating with one of your labmates on a project. You’reboth making changes to functions in the codebase. At one point, you both havechanged the same lines in a particular function. How do you go about mergingyour changes so that you’re both using the same code?<br>
- <br>
- This is why we use version control. **Version control** is a system that manages and recordschanges to files over time. The most commonly used version control system is called **Git** (others include Mercurial and SVN). `git` keeps track of the differences in the repository each time you make a change. The entire history of the repository is tracked by `git`. If you realize you made a mistake in your code, you can always roll it back to a previous timepoint.
+> Imagine that you’re collaborating with one of your labmates on a project. You’re both making changes to a document or a codebase. At one point, you both have changed the same lines in a particular document. How do you go about merging your changes?
+
+This is why we use version control. **Version control** is a system that manages and records changes to files over time. The most commonly used version control system is called **Git** (others include Mercurial and SVN). `git` keeps track of the differences in the repository each time you make a change. The entire history of the repository is tracked by `git`. If you realize you made a mistake in your code, you can always roll it back to a previous time point.
  
  ![personal_workflow](../images/personal.png)<br>
- 
  In the personal workflow, you are largely going to be the only person adding to the repository. You have one **branch**, or version of your project. It is called the `main` branch. Every time you make changes to the code, you'll add them tothe `main` branch. 
 
  ## GitHub
- `git` is often used in tandem with acloud-based hosting platform - the most common is **GitHub** (but others includeGitlab and Bitbucket). GitHub is a hosting service for Git repositories. It allows you to store your Git projects in the cloud and provides a platform for collaborating with others. The benefit to using GitHub is that it makes it easier to collaborate on code with others via its web platform.<br>
+ `git` is often used in tandem with a cloud-based hosting platform - the most common is **GitHub** (but others include Gitlab and Bitbucket). GitHub is a hosting service for Git repositories. It allows you to store your Git projects in the cloud and provides a platform for collaborating with others. The benefit to using GitHub is that it makes it easier to collaborate on code with others via its web platform.<br>
  
-In this lesson, we're going to use the **GitHub Desktop Application** to make updates to a repository.<br>
+In this lesson, we're going to use the [**GitHub Desktop Application**](https://desktop.github.com/download/) to make updates to a repository.<br>
 A **repository** (or repo for short) is a central place where all the files related to a project are stored. It includes your project’s code, documentation, and a record of every change made to the files over time, managed through a version control system like Git. <br>
 💡**Tip**: Git and GitHub can be used through command line. We are focusing on GUI version of GitHub. 
 
 ## Managing Local and Remote Repositories
 We need to make a distinction between two kinds of repositories: there's the local repository and the remote repository. **The local repository** is the version of the code that is stored on your computer. **The remote repository**, meanwhile, is any version of the repository that lies on some other machine. In this context, remote repository is almost always going to refer to the version that is on on Github's servers. <br>
 
-So, when we're making changes to a repository, there's two versions that need to stay in sync with each other: the local and the remote. The steps we outline keep track of those changes between both cases, while also keeping track of theentire history. Github provides a nice platform on which we can peruse the history of a repository.<br>
+So, when we're making changes to a repository, there's two versions that need to stay in sync with each other: the local and the remote. The steps we outline keep track of those changes between both cases, while also keeping track of the entire history. Github provides a nice platform on which we can peruse the history of a repository.<br>
  
  ![committing](../images/committing.jpeg)<br>
+1. **Add**: Select the changes you want to save.
+2. **Commit**: Save your selected changes with a description.
+3. **Push**: Upload your saved changes to GitHub for others to see.
+4. **Pull**: Download the latest updates from GitHub to your project.
+5. **Checkout**: Switch between different versions or branches of your project. <br>
  
  Let's go through the process of making changes to a repository, step by step.<br>
  
@@ -57,6 +61,8 @@ The first step to codifying this change in the `git`   history is to stage it, w
  7. **Pushing to the remote.** Right now, the local repo knows about the changes   we did, but the remote repo doesn't. So, we need to synchronize the two by   "pushing" our changes to the remote repo. We can do this by running the   command `git push origin main`: we are pushing the changes we made to   `origin` (the name of the remote repo), on the `main` branch.<br>
  8. Check Github to see if the changes you made manifest on the website! You can   run a final `git status` for posterity's sake.<br>
  So, even in the personal workflow, there's a lot of individual steps needed justto make changes to the codebase. This becomes a little bit more complicated whenmultiple people are making changes at the same time, which requires a slightlydifferent workflow.<br>
+
+ ![committing](../images/workflow.png)<br>
  
 # Collaborative Workflow<br>
  In the collaborative workflow, multiple people may be working on the samerepository at the same time. So we need to have a system in place for how todecide whose changes to add, and how to handle scenarios when changes may clashwith each other.<br>
