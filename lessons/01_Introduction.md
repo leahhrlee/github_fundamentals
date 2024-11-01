@@ -12,18 +12,18 @@
 ## Version Control<br>
  Imagine that you’re collaborating with one of your labmates on a project. You’reboth making changes to functions in the codebase. At one point, you both havechanged the same lines in a particular function. How do you go about mergingyour changes so that you’re both using the same code?<br>
  <br>
- This is why we use version control. **Version control** is a system that manages and recordschanges to files over time. The most commonly used version control system is called **Git** (others include Mercurial and SVN). 
+ This is why we use version control. **Version control** is a system that manages and recordschanges to files over time. The most commonly used version control system is called **Git** (others include Mercurial and SVN). `git` keeps track of the differences in the repository each time you make a change. The entire history of the repository is tracked by `git`. If you realize you made a mistake in your code, you can always roll it back to a previous timepoint.
  
  ![personal_workflow](../images/personal.png)<br>
  
- `git` keeps track of the differences in the repository each time you make a change. The **entire** history of the repository is tracked by `git`. If you realize you made a mistake in your code, you can always roll it back to a previous timepoint.<br>
- In the personal workflow, you are largely going to be the only person adding to the repository. You have one **branch**, or version of your project: it'll likely be called the `main` branch. Every time you make changes to the code, you'll add them tothe `main` branch. 
+ In the personal workflow, you are largely going to be the only person adding to the repository. You have one **branch**, or version of your project. It is called the `main` branch. Every time you make changes to the code, you'll add them tothe `main` branch. 
 
  ## GitHub
  `git` is often used in tandem with acloud-based hosting platform - the most common is **GitHub** (but others includeGitlab and Bitbucket). GitHub is a hosting service for Git repositories. It allows you to store your Git projects in the cloud and provides a platform for collaborating with others. The benefit to using GitHub is that it makes it easier to collaborate on code with others via its web platform.<br>
  
- In this lesson, we're going to use the **GitHub Desktop Application** to make updates to a repository.<br>
- A **repository** (or repo for short) is a central place where all the files related to a project are stored. It includes your project’s code, documentation, and a record of every change made to the files over time, managed through a version control system like Git.
+In this lesson, we're going to use the **GitHub Desktop Application** to make updates to a repository.<br>
+A **repository** (or repo for short) is a central place where all the files related to a project are stored. It includes your project’s code, documentation, and a record of every change made to the files over time, managed through a version control system like Git. <br>
+💡**Tip**: Git and GitHub can be used through command line. We are focusing on GUI version of GitHub. 
 
 ## Managing Local and Remote Repositories
 We need to make a distinction between two kinds of repositories: there's the local repository and the remote repository. **The local repository** is the version of the code that is stored on your computer. **The remote repository**, meanwhile, is any version of the repository that lies on some other machine. In this context, remote repository is almost always going to refer to the version that is on on Github's servers. <br>
@@ -33,24 +33,23 @@ So, when we're making changes to a repository, there's two versions that need to
  ![committing](../images/committing.jpeg)<br>
  
  Let's go through the process of making changes to a repository, step by step.<br>
-### Creating a Repository 
+ 
+### 1. Creating a Repository 
 To creating a new repository on Github, [link](https://docs.github.com/en/get-started/quickstart/create-a-repo) and follow the instructions on how to create a new repository on Github. Make sure to tick the `Add a README file` box under "Initialize this repository with". Click on `Create repository`. You now have a remote    repository (on Github's servers), but **not** a local repository.<br>
 
-To create a new repository on GitHub Desktop, click `Current Repository`, and `add`. Click `Create New Repository`. Make sure to tick the "Initialize this repository with a README file". You now have a local repository but **not** a remote repository. `Publish repository` in order to put this newly created repository onto GitHub. 
+To create a new repository on GitHub Desktop, click `Current Repository`, and `add`. Click `Create New Repository`. Make sure to tick the "Initialize this repository with a README file". You now have a local repository but **not** a remote repository. `Publish repository` in order to put this newly created repository onto GitHub. <br>
+🥊**Challenge**: Let's create a new repository under your account.
 
-## Personal Workflow<br>
-  
+
+### 2. **Cloning.** 
+Cloning a repository means taking a remote repository, and copying it to our local machine to create a local repository. Under `Current Repository`, click `add`and select `Clone Repository`. You can clone your own repository or any publically avaialable repository.  
  
- Each step in the Personal workflow is actually comprised of a set of smallersteps. Before we go through each step, we need to make a distinction between twokinds of repositories: there's the local repository and the remote repository.The local repository is easy: that's the version of the code that sits on yourcomputer. The remote repository, meanwhile, is any version of the repositorythat lies on some other machine. In this context, it's almost always going to refer to the version that sits on Github's servers.<br>
- 
- 
- 
-2. **Cloning.** We've done this with the `Bash-Git` repo. Cloning a repository   means taking a remote repository, and copying it to our local machine to   create a local repository. Let's clone the repo we just created. Open up a   terminal and run the command: `git clone [REPO-LINK]`, filling in the   `[REPO-LINK]` with the appropriate name provided by Github.<br>
- 
-3. **Checking the status.** A useful command to always run is `git status`. This   will provide a summary of what's going on in your repo. Run it to see what   happens - all it should say is that it's up to date with `origin/main`: this   means that it's up to date with `origin`, which is its name for the remote   repo. Within `origin`, it's synced to the `main` branch.<br>
- 
-4. **Making a change.** Let's make a change by creating a new file. Create a   file called `text.txt`, which has some text in it of your choosing. Then, run   `git status` and see what happens.<br>
- 5. **Staging a change.** The first step to codifying this change in the `git`   history is to stage it, which is done with the `git add` command.   Once a change is "added", it is placed in a staging area. You can think of   this as a "proposal" for the next record in the Git history. The proposal is   made permanent in the following step. To add the file, run `git add test.txt`.<br>
+### 3. **Making a change.** 
+GitHub Desktop automatically tracks changes. Whenever you make changes to the local repository, the changes will how up on the application. <br>
+Let's make a change by creating a new file. Create a   file called `text.txt`, which has some text in it of your choosing. Then, run   `git status` and see what happens.<br>
+
+### 5. **Staging a change.** 
+The first step to codifying this change in the `git`   history is to stage it, which is done with the `git add` command.   Once a change is "added", it is placed in a staging area. You can think of   this as a "proposal" for the next record in the Git history. The proposal is   made permanent in the following step. To add the file, run `git add test.txt`.<br>
     
 *Note
 *: "add" does not have the exact same meaning as the English word:   it actually means adding an operation. For instance, if we remove test.txt   locally by throwing it in the trash, and we then want to remove it from the   staging area and remote repo, we still do `git add test.txt`! <br>
@@ -99,3 +98,11 @@ To create a new repository on GitHub Desktop, click `Current Repository`, and `a
 2. Working on a repository that several people - perhaps some collaborators - are working on concurrently. <br>
 3. Working on a repository that *many* people (e.g., at least dozens) are involved in. This may be, for example, an open-source project to which you contribute changes. We will not cover this approach in this workshop, as the details may be specific to the project you're working on. However, the principles from approach 
 #2 hold here.<br>
+
+## Personal Workflow<br>
+  
+ 
+ Each step in the Personal workflow is actually comprised of a set of smallersteps. Before we go through each step, we need to make a distinction between twokinds of repositories: there's the local repository and the remote repository.The local repository is easy: that's the version of the code that sits on yourcomputer. The remote repository, meanwhile, is any version of the repositorythat lies on some other machine. In this context, it's almost always going to refer to the version that sits on Github's servers.<br>
+ 
+ 
+ 
