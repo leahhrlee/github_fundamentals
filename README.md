@@ -28,8 +28,7 @@ After this workshop, you will be able to:
 
 ## Installation Instructions
 
-We will use GitHub to go through the workshop materials, which requires installation of [GitHub Desktop](https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop
-). Complete the following steps:
+We will use GitHub to go through the workshop materials, which requires installation of [GitHub Desktop](https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop). Complete the following steps:
 
 1. Make a GitHub account.
 2. Download and install [GitHub Desktop](https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop
