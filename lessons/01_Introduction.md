@@ -12,28 +12,38 @@
 ## Version Control<br>
  Imagine that you’re collaborating with one of your labmates on a project. You’reboth making changes to functions in the codebase. At one point, you both havechanged the same lines in a particular function. How do you go about mergingyour changes so that you’re both using the same code?<br>
  <br>
- This is why we use version control. **Version control** is a system that manages and recordschanges to files over time. The most commonly used version control system is called **Git** (others include Mercurial and SVN). `git` is often used in tandem with acloud-based hosting platform - the most common is **GitHub** (but others includeGitlab and Bitbucket). GitHub is a hosting service for Git repositories. It allows you to store your Git projects in the cloud and provides a platform for collaborating with others. The benefit to using GitHub is that it makes it easier tocollaborate on code with others via its web platform.<br>
+ This is why we use version control. **Version control** is a system that manages and recordschanges to files over time. The most commonly used version control system is called **Git** (others include Mercurial and SVN). 
  
- In this lesson, we're going to use the **GitHub Desktop Application** to make updates toa repository.<br>
- 
- There are several different workflows in which you might imagine using `git`, particularly in an academic setting. These include:<br>
- 
-1. Working on a repository that is your own repo. You expect that you will generally be the only person developing code for this repository. <br>
-2. Working on a repository that several people - perhaps some collaborators - are working on concurrently. <br>
-3. Working on a repository that *many* people (e.g., at least dozens) are involved in. This may be, for example, an open-source project to which you contribute changes. We will not cover this approach in this workshop, as the details may be specific to the project you're working on. However, the principles from approach 
-#2 hold here.<br>
-
- 
-## Personal Workflow<br>
- In the personal workflow, you are largely going to be the only person adding tothe repository. You have one "branch", or version of the code: it'll likely becalled the `main` branch (in older Github repositories, it may be called the`master` branch). Every time you make changes to the code, you'll add them tothe `main` branch. So what's the benefit to using `git`?<br>
  ![personal_workflow](../images/personal.png)<br>
- `git` keeps track of the differences in the repository each time you make achange. The **entire** history of the repository is tracked by `git`. If yourealize you made a mistake in your code, you can always roll it back to aprevious timepoint.<br>
- Each step in the Personal workflow is actually comprised of a set of smallersteps. Before we go through each step, we need to make a distinction between twokinds of repositories: there's the local repository and the remote repository.The local repository is easy: that's the version of the code that sits on yourcomputer. The remote repository, meanwhile, is any version of the repositorythat lies on some other machine. In this context, it's almost always going torefer to the version that sits on Github's servers.<br>
- So, when we're making changes to a repository, there's two versions that need tostay in sync with each other: the local and the remote. The steps we outlinekeep track of those changes between both cases, while also keeping track of theentire history. Github provides a nice platform on which we can peruse thehistory of a repository.<br>
- ![committing](../images/committing.jpeg)<br>
- Let's go through the process of making changes to a repository, step by step.<br>
  
-1. **Creating a new repository on Github.** Go to this   [link](https://docs.github.com/en/get-started/quickstart/create-a-repo) and   follow the instructions on how to create a new repository on Github.    Make sure to tick the `Add a README file` box under "Initialize this    repository with". Click on `Create repository`. You now have a remote    repository (on Github's servers), but **not** a local repository.<br>
+ `git` keeps track of the differences in the repository each time you make a change. The **entire** history of the repository is tracked by `git`. If you realize you made a mistake in your code, you can always roll it back to a previous timepoint.<br>
+ In the personal workflow, you are largely going to be the only person adding to the repository. You have one **branch**, or version of your project: it'll likely be called the `main` branch. Every time you make changes to the code, you'll add them tothe `main` branch. 
+
+ ## GitHub
+ `git` is often used in tandem with acloud-based hosting platform - the most common is **GitHub** (but others includeGitlab and Bitbucket). GitHub is a hosting service for Git repositories. It allows you to store your Git projects in the cloud and provides a platform for collaborating with others. The benefit to using GitHub is that it makes it easier to collaborate on code with others via its web platform.<br>
+ 
+ In this lesson, we're going to use the **GitHub Desktop Application** to make updates to a repository.<br>
+ A **repository** (or repo for short) is a central place where all the files related to a project are stored. It includes your project’s code, documentation, and a record of every change made to the files over time, managed through a version control system like Git.
+
+## Managing Local and Remote Repositories
+We need to make a distinction between two kinds of repositories: there's the local repository and the remote repository. **The local repository** is the version of the code that is stored on your computer. **The remote repository**, meanwhile, is any version of the repository that lies on some other machine. In this context, remote repository is almost always going to refer to the version that is on on Github's servers. <br>
+
+So, when we're making changes to a repository, there's two versions that need to stay in sync with each other: the local and the remote. The steps we outline keep track of those changes between both cases, while also keeping track of theentire history. Github provides a nice platform on which we can peruse the history of a repository.<br>
+ 
+ ![committing](../images/committing.jpeg)<br>
+ 
+ Let's go through the process of making changes to a repository, step by step.<br>
+### Creating a Repository 
+To creating a new repository on Github, [link](https://docs.github.com/en/get-started/quickstart/create-a-repo) and follow the instructions on how to create a new repository on Github. Make sure to tick the `Add a README file` box under "Initialize this repository with". Click on `Create repository`. You now have a remote    repository (on Github's servers), but **not** a local repository.<br>
+
+To create a new repository on GitHub Desktop, click `Current Repository`, and `add`. Click `Create New Repository`. Make sure to tick the "Initialize this repository with a README file". You now have a local repository but **not** a remote repository. `Publish repository` in order to put this newly created repository onto GitHub. 
+
+## Personal Workflow<br>
+  
+ 
+ Each step in the Personal workflow is actually comprised of a set of smallersteps. Before we go through each step, we need to make a distinction between twokinds of repositories: there's the local repository and the remote repository.The local repository is easy: that's the version of the code that sits on yourcomputer. The remote repository, meanwhile, is any version of the repositorythat lies on some other machine. In this context, it's almost always going to refer to the version that sits on Github's servers.<br>
+ 
+ 
  
 2. **Cloning.** We've done this with the `Bash-Git` repo. Cloning a repository   means taking a remote repository, and copying it to our local machine to   create a local repository. Let's clone the repo we just created. Open up a   terminal and run the command: `git clone [REPO-LINK]`, filling in the   `[REPO-LINK]` with the appropriate name provided by Github.<br>
  
@@ -80,3 +90,12 @@
  
 # Learning more<br>
  That's the workflow! There are other `git` practices we didn't cover - handlingmerge conflicts, rebasing, etc. As you get deeper into `git`, you can peruse theGithub documentation for tips on how to do these more advanced `git` commands.
+
+
+ 
+ There are several different workflows in which you might imagine using `git`, particularly in an academic setting. These include:<br>
+ 
+1. Working on a repository that is your own repo. You expect that you will generally be the only person developing code for this repository. <br>
+2. Working on a repository that several people - perhaps some collaborators - are working on concurrently. <br>
+3. Working on a repository that *many* people (e.g., at least dozens) are involved in. This may be, for example, an open-source project to which you contribute changes. We will not cover this approach in this workshop, as the details may be specific to the project you're working on. However, the principles from approach 
+#2 hold here.<br>
